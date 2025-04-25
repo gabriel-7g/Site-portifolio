@@ -342,3 +342,73 @@ footer {
         height: 200px;
     }
 }
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: auto;
+    }
+
+    .header-text h1 {
+        font-size: 2em;
+    }
+
+    .header-text p {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-container,
+    .projects-container,
+    .contact-links {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .skill-card,
+    .project-card {
+        padding: 15px;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .header-text h1 {
+        font-size: 1.5em;
+    }
+
+    .header-text p {
+        font-size: 1em;
+    }
+
+    .contact-link,
+    .social-link {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
