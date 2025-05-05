@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Toggle Theme
     function toggleTheme() {
         const body = $('body');
         const button = $('.theme-toggle');
@@ -31,3 +30,7 @@ $(document).ready(function() {
         });
     });
 });
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("menu-nav").classList.toggle("active");
+});  
