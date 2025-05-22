@@ -42,20 +42,20 @@ header {
 }
 
 .profile-img {
-    width: 260px; 
+    width: 260px;
     height: 260px;
-    border-radius: 50%; 
-    object-fit: cover; 
-    object-position: center; 
-    border: 5px solid #00b4d8; 
-    background-color: #fff; 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid #00b4d8;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-img:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 .header-text h1 {
@@ -217,15 +217,6 @@ h2 {
     gap: 30px;
 }
 
-.project-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 .project-card:hover {
     transform: translateY(-10px);
 }
@@ -235,8 +226,18 @@ h2 {
     margin-bottom: 10px;
     color: #00b4d8;
 }
+.project-card-dark h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00b4d8;
+}
 
 .project-card p {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+.project-card-dark p {
     font-size: 1em;
     color: #7f8c8d;
     margin-bottom: 15px;
@@ -335,7 +336,7 @@ footer {
     transform: translateY(-2px);
 }
 
-.menu-toggle{
+.menu-toggle {
     display: none;
 }
 
@@ -372,7 +373,7 @@ footer {
         flex-direction: column;
         align-items: center;
         position: fixed;
-        
+
     }
 
     .skills-container,
@@ -394,7 +395,7 @@ footer {
         font-size: 0.9em;
     }
 
-    .menu-toggle{
+    .menu-toggle {
         display: block;
         position: fixed;
         font-size: 30px;
@@ -414,7 +415,7 @@ footer {
         padding: 10px;
         border-radius: 20px;
         height: 500px;
-        
+
     }
 
     nav.active {
@@ -441,7 +442,7 @@ footer {
         font-weight: 400;
         transition: all 0.3s ease;
         z-index: 101;
-        font-size: 11px ;
+        font-size: 11px;
     }
 }
 
@@ -471,11 +472,87 @@ footer {
 
 @keyframes slideDown {
     from {
-      transform: translateY(-100%);
-      opacity: 0;
+        transform: translateY(-100%);
+        opacity: 0;
     }
+
     to {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
+
+.scroll-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.projects-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 2rem;
+}
+
+.project-card {
+    min-width: 280px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.project-card-dark {
+    min-width: 280px;
+    background: #1b1919;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-btn:hover {
+    opacity: 1;
+}
+
+.scroll-btn.left {
+    left: 1rem;
+}
+
+.scroll-btn.right {
+    right: 1rem;
+}
+
+.projects-container::-webkit-scrollbar {
+    width: 6px;
+}
