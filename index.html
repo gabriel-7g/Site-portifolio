@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfólio - Gabriel</title>
-    <link rel="stylesheet" href="./Connects/estilo.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Connects/estilo.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/4365/4365945.png" type="image/x-icon">
+    <link
+        rel="shortcut icon"
+        href="https://cdn-icons-png.flaticon.com/512/4365/4365945.png"
+        type="image/x-icon"
+    />
 </head>
 <body class="light-mode">
+
+    <canvas id="particles-canvas"></canvas>
+
     <button class="theme-toggle" onclick="toggleTheme()">Modo Noturno</button>
 
     <header>
         <div class="header-content">
-            <img src="./Imagens/WhatsApp Image 2025-04-02 at 10.35.36.jpeg" alt="Foto de Perfil de Gabriel" class="profile-img">
+            <img
+                src="./Imagens/WhatsApp Image 2025-04-02 at 10.35.36.jpeg"
+                alt="Foto de Perfil de Gabriel"
+                class="profile-img"
+            />
             <div class="header-text">
                 <h1>Gabriel - Desenvolvedor</h1>
                 <p>Apaixonado por tecnologia e inovação</p>
@@ -25,11 +36,9 @@
         </div>
     </header>
 
-
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-    <nav id="menu-nav">
-        <ul>
+    <nav id="nav-mobile">
+        <ul id="menu-list">
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#projetos">Projetos</a></li>
@@ -41,11 +50,10 @@
         <h2>Sobre Mim</h2>
         <div class="sobre-content">
             <p>
-                Me chamo Gabriel e sou formado em Análise e Desenvolvimento de Sistemas pelo Senai. Estou em busca de oportunidades para aplicar e melhorar meus conhecimentos
-                cada vez mais, 
-                sou uma pessoa dedicada e muito proativa com bastante facilidade
-                para trabalhar em equipe, buscando sempre resultados melhores e com qualidade. 
-                
+                Me chamo Gabriel e sou formado em Análise e Desenvolvimento de Sistemas pelo Senai.
+                Estou em busca de oportunidades para aplicar e melhorar meus conhecimentos cada vez mais,
+                sou uma pessoa dedicada e muito proativa com bastante facilidade para trabalhar em equipe,
+                buscando sempre resultados melhores e com qualidade.
             </p>
         </div>
     </section>
@@ -54,36 +62,35 @@
         <h2>Minhas Habilidades</h2>
         <div class="skills-container">
             <div class="skill-card">
-                <img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" alt="Python">
+                <img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" alt="Python" />
                 <h3>Python</h3>
             </div>
             <div class="skill-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" />
                 <h3>JavaScript</h3>
             </div>
             <div class="skill-card">
-                <img src="https://cdn.iconscout.com/icon/free/png-256/free-jquery-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-freebies-pack-logos-icons-1175153.png?f=webp" alt="jQuery">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-jquery-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-freebies-pack-logos-icons-1175153.png?f=webp" alt="jQuery" />
                 <h3>jQuery</h3>
             </div>
             <div class="skill-card">
-                <img src="https://images.seeklogo.com/logo-png/27/2/flask-logo-png_seeklogo-273085.png" alt="Flask">
+                <img src="https://images.seeklogo.com/logo-png/27/2/flask-logo-png_seeklogo-273085.png" alt="Flask" />
                 <h3>Flask</h3>
             </div>
             <div class="skill-card">
-                <img src="https://i0.wp.com/learn.onemonth.com/wp-content/uploads/2019/07/image2-1.png?fit=600%2C315&ssl=1" alt="Database">
+                <img src="https://i0.wp.com/learn.onemonth.com/wp-content/uploads/2019/07/image2-1.png?fit=600%2C315&ssl=1" alt="Database" />
                 <h3>SQL</h3>
-
             </div>
             <div class="skill-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" alt="PowerBI">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" alt="Selenium" />
                 <h3>Selenium</h3>
             </div>
             <div class="skill-card">
-                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="Figma">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="Figma" />
                 <h3>Figma</h3>
             </div>
             <div class="skill-card">
-                <img src="https://images.seeklogo.com/logo-png/48/2/react-logo-png_seeklogo-480571.png" alt="Figma">
+                <img src="https://images.seeklogo.com/logo-png/48/2/react-logo-png_seeklogo-480571.png" alt="React" />
                 <h3>React</h3>
             </div>
         </div>
@@ -110,7 +117,10 @@
                 </div>
                 <div class="project-card">
                     <h3>Calculadora IMC</h3>
-                    <p>Uma calculadora de IMC intuitiva, que exibe os resultados de forma clara, prática e visual, facilitando a compreensão do seu estado de saúde com base no índice de massa corporal.</p>
+                    <p>
+                        Uma calculadora de IMC intuitiva, que exibe os resultados de forma clara, prática e visual,
+                        facilitando a compreensão do seu estado de saúde com base no índice de massa corporal.
+                    </p>
                     <a href="https://github.com/gabriel-7g/Calculadora-IMC" class="project-link" target="_blank">Ver no GitHub</a>
                 </div>
                 <div class="project-card">
@@ -120,22 +130,32 @@
                 </div>
                 <div class="project-card">
                     <h3>Automação de Envio de Mensagens com Excel e Python</h3>
+                    <p>Automação em Python para envio de mensagens com dados do Excel via openpyxl.</p>
+                    <a href="https://github.com/gabriel-7g/robo-automacao" class="project-link" target="_blank">Ver no GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Sistema de Cadastro</h3>
                     <p>
-                        Automação em Python para envio de mensagens com dados do Excel via openpyxl.
+                        CRUD completo com Flask, Bootstrap e JavaScript, focado em performance, organização e experiência do usuário.
+                        Um projeto que demonstra domínio técnico e visão prática de desenvolvimento web.
                     </p>
-                    <a href="https://github.com/gabriel-7g/node-task-api" class="project-link" target="_blank">Ver no GitHub</a>
+                    <a href="https://github.com/gabriel-7g/sistema-de-cadastro" class="project-link" target="_blank">Ver no GitHub</a>
                 </div>
             </div>
         </div>
     </section>
-    
 
     <section id="contato" class="section">
         <h2>Contato</h2>
         <div class="contact-links">
             <a href="mailto:gabrielchavees79@gmail.com" class="contact-link">Enviar Email</a>
             <a href="https://www.instagram.com/gabrielch.30/" target="_blank" class="contact-link instagram-link">Instagram</a>
-            <a href="https://wa.me/5581997254072?text=Olá,%20vim%20pelo%20seu%20portfólio!" target="_blank" class="contact-link whatsapp-link">WhatsApp</a>
+            <a
+                href="https://wa.me/5581997254072?text=Olá,%20vim%20pelo%20seu%20portfólio!"
+                target="_blank"
+                class="contact-link whatsapp-link"
+                >WhatsApp</a
+            >
         </div>
     </section>
 

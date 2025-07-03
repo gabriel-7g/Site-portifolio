@@ -5,15 +5,49 @@
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 @keyframes blink {
-  0%, 100% { border-color: transparent }
-  50% { border-color: #000 }
+
+    0%,
+    100% {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #000
+    }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes darkGradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -26,18 +60,36 @@ body {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     color: #2c3e50;
 }
+.light-mode .header-text p {
+  color: #4b4b4b;
+}
 
 .dark-mode {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     color: #ecf0f1;
 }
+.dark-mode h1, .dark-mode p {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
 
 header {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(-45deg, #00b4d8, #0077b6, #90e0ef, #caf0f8);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #2c3e50;
+    transition: all 0.5s ease;
 }
+.dark-mode header {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a2e);
+    background-size: 400% 400%;
+    animation: darkGradientBG 12s ease infinite;
+    color: #ecf0f1;
+    transition: all 0.5s ease;
+}
+
 
 .header-content {
     display: flex;
@@ -50,6 +102,7 @@ header {
     padding: 40px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
+    animation: fadeInUp 1s ease-out;
 }
 
 .profile-img {
@@ -65,8 +118,8 @@ header {
 }
 
 .profile-img:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px) scale(1.1);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .header-text h1 {
@@ -78,6 +131,7 @@ header {
 .header-text p {
     font-size: 1.4em;
     color: #7f8c8d;
+    font-weight: 300;
 }
 
 .social-links {
@@ -88,12 +142,18 @@ header {
 }
 
 .social-link {
-    padding: 12px 25px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    font-size: 1em;
+  padding: 10px 20px;
+  background-color: #00b4d8;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.social-link:hover {
+  background-color: #0096c7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 .github-link {
@@ -130,7 +190,7 @@ nav {
     background: linear-gradient(90deg, #00b4d8, #0083b0);
     padding: 15px 0;
     position: sticky;
-    top: 0;
+    top: -12%;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -152,7 +212,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(90deg, #00b4d8, #0083b0);
     color: #fff;
 }
 
@@ -231,6 +291,7 @@ h2 {
 .project-card:hover {
     transform: translateY(-10px);
 }
+
 .project-card-dark:hover {
     transform: translateY(-10px);
 }
@@ -240,6 +301,7 @@ h2 {
     margin-bottom: 10px;
     color: #00b4d8;
 }
+
 .project-card-dark h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
@@ -251,6 +313,7 @@ h2 {
     color: #7f8c8d;
     margin-bottom: 15px;
 }
+
 .project-card-dark p {
     font-size: 1em;
     color: #7f8c8d;
@@ -350,19 +413,30 @@ footer {
     transform: translateY(-2px);
 }
 
+
+#menu-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+#menu-list li a {
+  color: white;
+  text-decoration: none;
+}
+
 .menu-toggle {
     display: none;
 }
 
-
 @media (max-width: 768px) {
     .profile-img {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
-}
 
-@media (max-width: 768px) {
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -378,9 +452,8 @@ footer {
         font-size: 2em;
         overflow: hidden;
         white-space: nowrap;
-        border-right: 2px solid #000;
         width: 0;
-        animation: 
+        animation:
             typing 3s steps(30, end) forwards,
             blink 0.7s step-end infinite;
     }
@@ -394,7 +467,6 @@ footer {
         flex-direction: column;
         align-items: center;
         position: fixed;
-
     }
 
     .skills-container,
@@ -422,11 +494,33 @@ footer {
         font-size: 30px;
         cursor: pointer;
         padding: 10px;
-        color: white;
-        top: -2px;
-        left: 10px;
+        color: black;
+        top: -10px;       
+        left: -10px;
         z-index: 1000;
-        margin-left: -10px;
+    }
+
+    #menu-list {
+        display: none;
+    }
+    nav.active #menu-list {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0,141,184,255);
+        position: absolute;
+    }
+
+    #menu-list li a {
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    #menu-list {
+        transition: all 0.3s ease;
+    }
+    #menu-list li {
+        margin: 10px 0;
     }
 
     nav.active ul {
@@ -443,27 +537,11 @@ footer {
         display: flex;
         flex-direction: column;
         border-radius: 20px;
-        width: 150px;
-        height: 50%;
+        width: 130px;
+        height: 55%;
         overflow: hidden;
         animation: slideDown 0.7s ease forwards;
         margin-left: -16px;
-    }
-
-    .theme-toggle {
-        position: fixed;
-        top: 15px;
-        right: 20px;
-        padding: 10px 20px;
-        cursor: pointer;
-        border: none;
-        border-radius: 25px;
-        background: #00b4d8;
-        color: #fff;
-        font-weight: 400;
-        transition: all 0.3s ease;
-        z-index: 101;
-        font-size: 11px;
     }
 }
 
@@ -477,7 +555,7 @@ footer {
         white-space: nowrap;
         border-right: 2px solid #000;
         width: 0;
-        animation: 
+        animation:
             typing 3s steps(30, end) forwards,
             blink 0.7s step-end infinite;
     }
@@ -530,6 +608,7 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
 }
+
 .project-card-dark {
     min-width: 280px;
     background: #1b1919;
@@ -576,4 +655,14 @@ footer {
 
 .projects-container::-webkit-scrollbar {
     width: 6px;
+}
+
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
